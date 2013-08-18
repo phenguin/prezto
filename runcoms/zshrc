@@ -38,4 +38,9 @@ function precmd () {
 autoload edit-command-line
 zle -N edit-command-line
 bindkey '^Xe' edit-command-line
+#
+# Meta-u to chdir to the parent directory
+bindkey -s '\eu' '^Ucd ..; ls^M'
 
+# If AUTO_PUSHD is set, Meta-p pops the dir stack
+bindkey -s '\ep' '^Upopd >/dev/null; dirs -v^M'
