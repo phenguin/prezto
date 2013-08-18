@@ -29,41 +29,9 @@ zstyle -s ':prezto:module:git:status:ignore' submodules '_git_status_ignore_subm
 # Git
 alias g='git'
 
-# Branch (b)
-alias gb='git branch'
-alias gbc='git checkout -b'
-alias gbl='git branch -v'
-alias gbL='git branch -av'
-alias gbx='git branch -d'
-alias gbX='git branch -D'
-alias gbm='git branch -m'
-alias gbM='git branch -M'
-alias gbs='git show-branch'
-alias gbS='git show-branch -a'
-
 # Commit (c)
 alias gc='git commit --verbose'
 alias gca='git commit --verbose --all'
-alias gcm='git commit --message'
-alias gco='git checkout'
-alias gcO='git checkout --patch'
-alias gcf='git commit --amend --reuse-message HEAD'
-alias gcF='git commit --verbose --amend'
-alias gcp='git cherry-pick --ff'
-alias gcP='git cherry-pick --no-commit'
-alias gcr='git revert'
-alias gcR='git reset "HEAD^"'
-alias gcs='git show'
-alias gcl='git-commit-lost'
-
-# Conflict (C)
-alias gCl='git status | sed -n "s/^.*both [a-z]*ed: *//p"'
-alias gCa='git add $(gCl)'
-alias gCe='git mergetool $(gCl)'
-alias gCo='git checkout --ours --'
-alias gCO='gCo $(gCl)'
-alias gCt='git checkout --theirs --'
-alias gCT='gCt $(gCl)'
 
 # Data (d)
 alias gd='git ls-files'
@@ -107,54 +75,6 @@ alias glo='git log --topo-order --pretty=format:"${_git_log_oneline_format}"'
 alias glg='git log --topo-order --all --graph --pretty=format:"${_git_log_oneline_format}"'
 alias glb='git log --topo-order --pretty=format:"${_git_log_brief_format}"'
 alias glc='git shortlog --summary --numbered'
-
-# Merge (m)
-alias gm='git merge'
-alias gmC='git merge --no-commit'
-alias gmF='git merge --no-ff'
-alias gma='git merge --abort'
-alias gmt='git mergetool'
-
-# Push (p)
-alias gp='git push'
-alias gpf='git push --force'
-alias gpa='git push --all'
-alias gpA='git push --all && git push --tags'
-alias gpt='git push --tags'
-alias gpc='git push --set-upstream origin "$(git-branch-current 2> /dev/null)"'
-alias gpp='git pull origin "$(git-branch-current 2> /dev/null)" && git push origin "$(git-branch-current 2> /dev/null)"'
-
-# Rebase (r)
-alias gr='git rebase'
-alias gra='git rebase --abort'
-alias grc='git rebase --continue'
-alias gri='git rebase --interactive'
-alias grs='git rebase --skip'
-
-# Remote (R)
-alias gR='git remote'
-alias gRl='git remote --verbose'
-alias gRa='git remote add'
-alias gRx='git remote rm'
-alias gRm='git remote rename'
-alias gRu='git remote update'
-alias gRp='git remote prune'
-alias gRs='git remote show'
-alias gRb='git-hub-browse'
-
-# Stash (s)
-alias gs='git stash'
-alias gsa='git stash apply'
-alias gsx='git stash drop'
-alias gsX='git-stash-clear-interactive'
-alias gsl='git stash list'
-alias gsL='git-stash-dropped'
-alias gsd='git stash show --patch --stat'
-alias gsp='git stash pop'
-alias gsr='git-stash-recover'
-alias gss='git stash save --include-untracked'
-alias gsS='git stash save --patch --no-keep-index'
-alias gsw='git stash save --include-untracked --keep-index'
 
 # Submodule (S)
 alias gS='git submodule'
